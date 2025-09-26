@@ -1,13 +1,11 @@
 ---
-- name: Gather Cisco router hostname, OS version, and model
-  tasks:
-    - name: Gather IOS facts
-      cisco.ios.ios_facts:
-        gather_subset: all
+- name: Gather IOS facts
+  cisco.ios.ios_facts:
+    gather_subset: all
 
-    - name: Show results
-      debug:
-        msg:
-          - "Hostname: {{ ansible_net_hostname }}"
-          - "OS Version: {{ ansible_net_version }}"
-          - "Model: {{ ansible_net_model }}"
+- name: Show results
+  debug:
+    msg:
+    - "Hostname: {{ ansible_net_hostname }}"
+    - "OS Version: {{ ansible_net_version }}"
+    - "Model: {{ ansible_net_model }}"
