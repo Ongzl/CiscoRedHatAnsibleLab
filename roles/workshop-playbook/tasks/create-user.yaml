@@ -4,3 +4,5 @@
     name: "{{ name }}"
     configured_password: "{{ pw }}"
     update_password: always
+    state: present
+    privilege: 15
