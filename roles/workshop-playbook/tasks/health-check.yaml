@@ -7,6 +7,8 @@
   cisco.ios.ios_facts:
     gather_subset: hardware
   register: hardware_facts
+
+- name: Print hardware_facts
   debug:
     msg:
       hardware_facts
