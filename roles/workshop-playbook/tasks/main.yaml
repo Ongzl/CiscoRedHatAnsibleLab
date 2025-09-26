@@ -3,3 +3,5 @@
   import_tasks: gather-facts.yaml
 - name: "Task 2: Set login banner"
   import_tasks: login-banner.yaml
+- name: "Task 3: Configure SNMP"
+  import_tasks: configure-snmp.yaml
