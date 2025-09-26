@@ -1,0 +1,15 @@
+---
+- name: Initialize vars
+  set_fact:
+    cpu_pass: "{{ cpu_pass | default('false') }}"
+
+- name: Gather IOS facts on hardware
+  cisco.ios.ios_facts:
+    gather_subset: hardware
+  register: hardware_facts
+  debug:
+    msg:
+      hardware_facts
+#- name: CPU util check
+#  when:
+#    - hardware_facts.ansible_facts
