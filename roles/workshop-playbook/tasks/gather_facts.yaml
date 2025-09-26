@@ -1,0 +1,15 @@
+---
+- name: Gather Cisco router hostname, OS version, and model
+  hosts: cisco
+  gather_facts: no   # we only want network facts
+  tasks:
+    - name: Gather IOS facts
+      cisco.ios.ios_facts:
+        gather_subset: all
+
+    - name: Show results
+      debug:
+        msg:
+          - "Hostname: {{ ansible_net_hostname }}"
+          - "OS Version: {{ ansible_net_version }}"
+          - "Model: {{ ansible_net_model }}"
