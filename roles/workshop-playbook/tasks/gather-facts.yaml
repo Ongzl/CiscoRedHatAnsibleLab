@@ -1,7 +1,5 @@
 ---
 - name: Gather Cisco router hostname, OS version, and model
-  hosts: cisco
-  gather_facts: yes
   tasks:
     - name: Gather IOS facts
       cisco.ios.ios_facts:
