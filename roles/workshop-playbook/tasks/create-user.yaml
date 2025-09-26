@@ -1,0 +1,6 @@
+---
+- name: Create new user account on all cisco router
+  cisco.ios.ios_user:
+    name: "{{ name }}"
+    configured_password: "{{ pw }}"
+    update_password: always

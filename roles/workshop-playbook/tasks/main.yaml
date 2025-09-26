@@ -5,3 +5,5 @@
   import_tasks: login-banner.yaml
 - name: "Task 3: Configure SNMP"
   import_tasks: configure-snmp.yaml
+- name: "Task 4: Create new user account"
+  import_tasks: create-user.yaml
