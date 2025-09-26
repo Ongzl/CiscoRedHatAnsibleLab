@@ -11,7 +11,7 @@
 - name: Print hardware_facts
   debug:
     msg:
-      hardware_facts
+      "{{ hardware_facts }}"
 #- name: CPU util check
 #  when:
 #    - hardware_facts.ansible_facts
